@@ -1,0 +1,15 @@
+# Databricks Asset Bundle Configuration
+bundle:
+  name: pptx-translator
+
+# workspace セクションを省略すると、Databricks CLI の認証設定を自動で使用
+# databricks auth login で設定したプロファイルが使われます
+
+resources:
+  apps:
+    pptx-translator:
+      name: pptx-translator
+      description: PowerPoint 翻訳アプリ（英語→日本語）
+
+      # アプリのソースコード（カレントディレクトリ）
+      source_code_path: .

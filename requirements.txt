@@ -1,0 +1,21 @@
+# PowerPoint 翻訳アプリの依存ライブラリ
+# Databricks Apps 用（本番環境のみ）
+
+# UI
+streamlit==1.54.0
+
+# PPTX 操作
+python-pptx==1.0.2
+
+# LLM 呼び出し
+openai==2.24.0
+databricks-openai>=0.3.0  # Databricks 認証付き OpenAI クライアント
+
+# Databricks 認証
+databricks-sdk==0.94.0
+
+# 用語集
+pandas==2.3.3
+
+# Note: テスト用パッケージ（pytest, pytest-mock）は開発環境のみで使用
+# ローカルでテストする場合: pip install pytest pytest-mock

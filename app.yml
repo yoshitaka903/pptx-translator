@@ -1,0 +1,9 @@
+# Databricks App Configuration
+
+# Streamlit アプリの起動コマンド（公式推奨形式）
+command: ['streamlit', 'run', 'app.py']
+
+# 環境変数
+env:
+  - name: 'STREAMLIT_GATHER_USAGE_STATS'
+    value: 'false'
