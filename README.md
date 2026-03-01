@@ -54,41 +54,6 @@ databricks apps deploy pptx-translator --source-code-path .
 https://<your-workspace>.databricks.com/apps/pptx-translator
 ```
 
-## ローカル開発（デモモード）
-
-Databricks 認証なしでローカル環境でテストできます（デモモード）。
-
-### 1. 仮想環境の作成
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
-```
-
-### 2. 依存パッケージのインストール
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3. アプリの起動
-
-```bash
-streamlit run app.py
-```
-
-**注意:** ローカル環境では `[デモ翻訳] 元のテキスト` 形式の疑似翻訳が生成されます。
-
-## ローカル開発（実翻訳）
-
-環境変数を設定すれば、ローカル環境でも実翻訳が可能です。
-
-```bash
-export DATABRICKS_HOST="your-workspace.databricks.com"
-export DATABRICKS_TOKEN="dapi..."
-streamlit run app.py
-```
-
 ## テスト
 
 ```bash
@@ -145,15 +110,7 @@ pptx-translator/
 
 ## トラブルシューティング
 
-### "ValueError: shape is not a placeholder"
-
-→ 修正済み（v1.0.0 以降）
-
 ### "Connection error" / "LLM call failed"
-
-ローカル環境の場合:
-- デモモードで動作します（`[デモ翻訳] ...` 形式）
-- 実翻訳するには環境変数 `DATABRICKS_HOST` と `DATABRICKS_TOKEN` を設定
 
 Databricks Apps 環境の場合:
 - Foundation Model APIs へのアクセス権限を確認
