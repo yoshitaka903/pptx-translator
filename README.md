@@ -34,16 +34,16 @@ databricks auth login --host https://<your-workspace>.databricks.com
 databricks bundle validate
 ```
 
-#### 3. デプロイ（開発環境）
+#### 3. リソースのデプロイ
 
 ```bash
-databricks bundle deploy -t dev
+databricks bundle deploy
 ```
 
-#### 4. アプリの起動
+#### 4. アプリのデプロイ
 
 ```bash
-databricks apps deploy pptx-translator --source-code-path .
+databricks apps deploy pptx-translator
 ```
 
 #### 5. アプリへのアクセス
